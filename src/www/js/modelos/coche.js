@@ -7,6 +7,8 @@ class Coche {
         this.fechaFabricacion;
         this.descripcion;
         this.enFabricacion;
+        this.extras;
+        
     }
 
 }
