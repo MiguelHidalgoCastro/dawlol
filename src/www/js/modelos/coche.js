@@ -1,14 +1,13 @@
 
-class Coche {
+export class Coche {
 
     constructor() {
-        this.marca;
-        this.modelo;
+        this.idMarcaModelo;
         this.fechaFabricacion;
         this.descripcion;
         this.enFabricacion;
         this.extras;
-        
+
     }
 
 }
