@@ -1,0 +1,167 @@
+{
+  "id": "f2b856f9-c7a5-4a99-8a86-c61897f74123",
+  "version": "2.0",
+  "name": "dawlol",
+  "url": "https://miguelhidalgocastro.github.io",
+  "tests": [{
+    "id": "e7834455-9491-4f2f-806e-fb9131889a91",
+    "name": "cambio de vistas",
+    "commands": [{
+      "id": "5fcaced4-9f58-402d-9b6c-630ce739379a",
+      "comment": "",
+      "command": "open",
+      "target": "/dawlol/src/www/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f9f6040-6326-425a-8398-0fd740a733af",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "affbb7e5-a06b-4e66-b642-d847b2766a96",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bi-plus-square",
+      "targets": [
+        ["css=.bi-plus-square", "css:finder"],
+        ["xpath=//span[@id='addCoche']/em", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/span/em", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc256cf7-01be-40b7-a3ee-b404b77cd18f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-warning:nth-child(2)",
+      "targets": [
+        ["css=.btn-warning:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='vistaCrearCRUD']/form/div[5]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/form/div[5]/div/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a23387a7-b55e-4736-97a3-6c7542f78583",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bi-plus-square",
+      "targets": [
+        ["css=.bi-plus-square", "css:finder"],
+        ["xpath=//span[@id='addCoche']/em", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/span/em", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "06c39e13-41dc-4633-8659-f66f46773682",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='vistaCrearCRUD']/form/div[5]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/form/div[5]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aceptar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a13ec5ab-ec1a-4ab3-9644-ded33ea6f3c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bi-pencil-square",
+      "targets": [
+        ["css=.bi-pencil-square", "css:finder"],
+        ["xpath=//span[@id='modCoche']/em", "xpath:idRelative"],
+        ["xpath=//em", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6da7a501-2230-4638-b452-eb004550c357",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-secondary:nth-child(2)",
+      "targets": [
+        ["css=.btn-secondary:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='vistaModificarCRUD']/form/div[5]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Cancelar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f81a745-64ea-4bf6-934f-cf6874e1abba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bi-pencil-square",
+      "targets": [
+        ["css=.bi-pencil-square", "css:finder"],
+        ["xpath=//span[@id='modCoche']/em", "xpath:idRelative"],
+        ["xpath=//em", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ccb1f723-e7a4-42e7-bb35-4eebd1662abe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-warning:nth-child(1)",
+      "targets": [
+        ["css=.btn-warning:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaModificarCRUD']/form/div[5]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Modificar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fcb5582-95dd-4a28-89f3-9db913a215cf",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26cbcfa1-f793-4b96-8372-10cc110e7658",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bi-trash-fill",
+      "targets": [
+        ["css=.bi-trash-fill", "css:finder"],
+        ["xpath=//span[@id='delCoche']/em", "xpath:idRelative"],
+        ["xpath=//div[2]/span/em", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92ea0620-031e-46c9-a45a-7b09b1299471",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Estas seguro?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c54c8868-6439-4d41-8dcf-d52510f00fef",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db07178d-1fd5-4daa-b57d-d7dfb62b266c",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Okay, coche borrado.",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "8be58c26-5a2c-42d4-9498-d7d4adfe889e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e7834455-9491-4f2f-806e-fb9131889a91"]
+  }],
+  "urls": ["https://miguelhidalgocastro.github.io/"],
+  "plugins": []
+}
