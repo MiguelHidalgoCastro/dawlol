@@ -1,12 +1,16 @@
 /*HEADER*/
-#navbar{
-    background: #b0b2b469; 
+#navbar {
+    background: #b0b2b469;
 }
 
-#navbar a{
+#navbar a {
     color: white !important;
 }
 
-body{
+body {
     min-width: 300px;
+}
+
+div#vistaCrearCRUD, div#vistaModificarCRUD, div#vistaListaCRUD {
+    display: none;
 }
