@@ -4,7 +4,7 @@
  */
 import { VistaLista } from "../vistas/vistalista.js"
 import { VistaCrear } from "../vistas/vistacrear.js"
-import { VistaModificar } from "../vistas/vistamodificar.js"
+import { Modelo } from "../modelos/modelo.js"
 /**
  * Controlador principal de la app
  */
@@ -14,6 +14,7 @@ class Controlador {
      * Carga el método iniciar al cargar la página
      */
     constructor() {
+        this.modelo = new Modelo(this)
         window.onload = this.iniciar.bind(this)
     }
     /**
@@ -26,13 +27,15 @@ class Controlador {
         /*Containers de los divs*/
         this.divListaCRUD = document.getElementById('vistaListaCRUD')
         this.divCrearCRUD = document.getElementById('vistaCrearCRUD')
-        this.divModificarCRUD = document.getElementById('vistaModificarCRUD')
+        //this.divModificarCRUD = document.getElementById('vistaModificarCRUD')
 
         this.vistaListaCoches = new VistaLista(this, this.divListaCRUD)
         this.vistaCrearCoches = new VistaCrear(this, this.divCrearCRUD)
-        this.VistaModificarCoches = new VistaModificar(this, this.divModificarCRUD)
+        //this.VistaModificarCoches = new VistaModificar(this, this.divModificarCRUD)
 
-        this.vistaListaCoches.mostrar(true)
+        //this.vistaListaCoches.mostrar(true)
+        // mientras programo el crear
+        this.vistaCrearCoches.mostrar(true)
 
     }
     /**
@@ -41,7 +44,7 @@ class Controlador {
     mostrarIndex() {
         this.vistaListaCoches.mostrar(true)
         this.vistaCrearCoches.mostrar(false)
-        this.VistaModificarCoches.mostrar(false)
+        //this.VistaModificarCoches.mostrar(false)
     }
     /**
      * Muestra el formulario de crear
@@ -49,15 +52,12 @@ class Controlador {
     mostrarFormularioCrear() {
         this.vistaListaCoches.mostrar(false)
         this.vistaCrearCoches.mostrar(true)
-        this.VistaModificarCoches.mostrar(false)
+        //this.VistaModificarCoches.mostrar(false)
     }
-    /**
-     * Muestra el formulario de modificar
-     */
-    mostrarFormularioModificar() {
-        this.vistaListaCoches.mostrar(false)
-        this.vistaCrearCoches.mostrar(false)
-        this.VistaModificarCoches.mostrar(true)
+
+
+    insertarCoche(coche) {
+        this.modelo.insertar(coche, this.insertarCoche.bind(this))
     }
 }
 

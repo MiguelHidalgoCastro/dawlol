@@ -24,91 +24,6 @@
     </div>
 
     <!--
-        VISTA MODIFICAR
-    -->
-    <div class="container" id="vistaModificarCRUD">
-        <!--Titulo-->
-        <div class="row">
-            <div class="col" id="tituloModificarCRUD">
-                <h3 class="fw-bold mb-3">Modificar coche</h3>
-            </div>
-        </div>
-
-        <!--FORMULARIO MOD-->
-
-        <form action="" class="col-8 p-2 w-auto">
-            <div class="row mb-1">
-                <div class="col">
-                    <label for="marca">Marca</label>
-                    <input type="text" class="form-control" id="marca" placeholder="Volkswagen">
-                </div>
-                <div class="col">
-                    <label for="modelo">Modelo</label>
-                    <input type="text" class="form-control" id="modelo" placeholder="Golf">
-                </div>
-            </div>
-            <div class="row mb-1">
-                <div class="col">
-                    <label for="fechaFab">Fecha Fabricación</label>
-                    <input type="date" class="form-control" id="fechaFab">
-                </div>
-                <div class="col">
-                    <label for="enFab">En Fabricación</label>
-                    <select id="enFab" class="form-select">
-                        <option selected>Si</option>
-                        <option>No</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row mb-1">
-                <div class="col form-group">
-                    <label>Extras</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckAbs" />
-                        <label class="form-check-label" for="flexCheckAbs">ABS</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckEsp" />
-                        <label class="form-check-label" for="flexCheckEsp">ESP</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckAACC" />
-                        <label class="form-check-label" for="flexCheckAACC">Aire Acondicionado</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckPremium" />
-                        <label class="form-check-label" for="flexCheckPremium">Interior Premium</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckSensores" />
-                        <label class="form-check-label" for="flexCheckSensores">Sensores Aparcamiento</label>
-                    </div>
-
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Descripción</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="formFileMultiple" class="form-label">Elije Imágenes</label>
-                    <input class="form-control" type="file" id="formFileMultiple" multiple>
-                </div>
-            </div>
-            <div class="row mb-1 float-end">
-                <div class="col">
-                    <button type="submit" class="btn btn-warning">Modificar</button>
-                    <button class="btn btn-secondary">Cancelar</button>
-                </div>
-            </div>
-        </form>
-    </div>
-
-    <!--
         VISTA CREAR
     -->
     <div class="container" id="vistaCrearCRUD">
@@ -121,27 +36,27 @@
 
         <!--FORMULARIO CREAR-->
 
-        <form action="" class="col-8 p-2 w-auto">
+        <div class="col-8 p-2 w-auto">
             <div class="row mb-1">
                 <div class="col">
-                    <label for="marcaC">Marca</label>
-                    <input type="text" class="form-control" id="marcaC" placeholder="Volkswagen">
+                    <label for="imarca">Marca</label>
+                    <input type="text" class="form-control" id="imarca" placeholder="Example -> Volkswagen">
                 </div>
                 <div class="col">
-                    <label for="modeloC">Modelo</label>
-                    <input type="text" class="form-control" id="modeloC" placeholder="Golf">
+                    <label for="imodelo">Modelo</label>
+                    <input type="text" class="form-control" id="imodelo" placeholder="Example -> Golf">
                 </div>
             </div>
             <div class="row mb-1">
                 <div class="col">
-                    <label for="fechaFabC">Fecha Fabricación</label>
-                    <input type="date" class="form-control" id="fechaFabC">
+                    <label for="ifecha">Fecha Fabricación</label>
+                    <input type="date" class="form-control" id="ifecha">
                 </div>
                 <div class="col">
-                    <label for="enFabC">En Fabricación</label>
-                    <select id="enFabC" class="form-select">
-                        <option selected>Si</option>
-                        <option>No</option>
+                    <label for="enFab">En Fabricación</label>
+                    <select id="enFab" class="form-select">
+                        <option id="fab1" selected>Si</option>
+                        <option id="fab0">No</option>
                     </select>
                 </div>
             </div>
@@ -149,48 +64,48 @@
                 <div class="col form-group">
                     <label>Extras</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                        <label class="form-check-label" for="flexCheckDefault">ABS</label>
+                        <input class="form-check-input" type="checkbox" value="" id="extra1" />
+                        <label class="form-check-label" for="extra1">ABS</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC" />
-                        <label class="form-check-label" for="flexCheckDefaultC">ESP</label>
+                        <input class="form-check-input" type="checkbox" value="" id="extra2" />
+                        <label class="form-check-label" for="extra2">ESP</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultG" />
-                        <label class="form-check-label" for="flexCheckDefaultG">Aire Acondicionado</label>
+                        <input class="form-check-input" type="checkbox" value="" id="extra3" />
+                        <label class="form-check-label" for="extra3">Aire Acondicionado</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultF" />
-                        <label class="form-check-label" for="flexCheckDefaultF">Interior Premium</label>
+                        <input class="form-check-input" type="checkbox" value="" id="extra4" />
+                        <label class="form-check-label" for="extra4">Interior Premium</label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultK" />
-                        <label class="form-check-label" for="flexCheckDefaultK">Sensores Aparcamiento</label>
+                        <input class="form-check-input" type="checkbox" value="" id="extra5" />
+                        <label class="form-check-label" for="extra5">Sensores Aparcamiento</label>
                     </div>
 
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <label for="textaDescripcion">Descripción</label>
-                        <textarea class="form-control" id="textaDescripcion" rows="5"></textarea>
+                        <label for="textDescripcion">Descripción</label>
+                        <textarea class="form-control" id="textDescripcion" rows="5"></textarea>
                     </div>
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col">
-                    <label for="formFileMultipleC" class="form-label">Elije Imágenes</label>
-                    <input class="form-control" type="file" id="formFileMultipleC" multiple>
+                    <label for="imagen" class="form-label">Elije Imágenes</label>
+                    <input class="form-control" type="file" id="imagen" name="imagen">
                 </div>
             </div>
             <div class="row mb-1 float-end">
                 <div class="col">
-                    <button type="submit" class="btn btn-success">Aceptar</button>
                     <button class="btn btn-warning">Cancelar</button>
+                    <button class="btn btn-success" id="btnCrearAceptar">Aceptar</button>
                 </div>
             </div>
-        </form>
+        </div>
 
     </div>
 
