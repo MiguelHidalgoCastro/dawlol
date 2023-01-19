@@ -2,155 +2,563 @@
   "id": "f2b856f9-c7a5-4a99-8a86-c61897f74123",
   "version": "2.0",
   "name": "dawlol",
-  "url": "https://miguelhidalgocastro.github.io",
+  "url": "https://miguelhidalgocastro.github.io/dawlol/src/www/",
   "tests": [{
-    "id": "e7834455-9491-4f2f-806e-fb9131889a91",
-    "name": "cambio de vistas",
+    "id": "97756820-3918-4b6e-a02c-fb7140868294",
+    "name": "Test de Crear, borrar, modificar y consultar",
     "commands": [{
-      "id": "5fcaced4-9f58-402d-9b6c-630ce739379a",
+      "id": "4f2b4851-1588-484b-9b0b-f78eb10a6a77",
       "comment": "",
       "command": "open",
-      "target": "/dawlol/src/www/",
+      "target": "https://miguelhidalgocastro.github.io/dawlol/src/www/",
       "targets": [],
       "value": ""
     }, {
-      "id": "9f9f6040-6326-425a-8398-0fd740a733af",
+      "id": "4c12bbff-c4dd-475c-aae8-a24e9f9318bd",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1552x840",
+      "target": "1936x1056",
       "targets": [],
       "value": ""
     }, {
-      "id": "affbb7e5-a06b-4e66-b642-d847b2766a96",
+      "id": "7a08944b-2dac-4b64-b4bf-16b1c749b5d6",
       "comment": "",
       "command": "click",
       "target": "css=.bi-plus-square",
       "targets": [
         ["css=.bi-plus-square", "css:finder"],
         ["xpath=//span[@id='addCoche']/em", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/span/em", "xpath:position"]
+        ["xpath=//div[12]/span/em", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "fc256cf7-01be-40b7-a3ee-b404b77cd18f",
+      "id": "881da7ec-5a1a-45c1-ab9b-7d2e0d325083",
       "comment": "",
       "command": "click",
-      "target": "css=.btn-warning:nth-child(2)",
+      "target": "id=imarca",
       "targets": [
-        ["css=.btn-warning:nth-child(2)", "css:finder"],
-        ["xpath=//div[@id='vistaCrearCRUD']/form/div[5]/div/button[2]", "xpath:idRelative"],
-        ["xpath=//div[3]/form/div[5]/div/button[2]", "xpath:position"]
+        ["id=imarca", "id"],
+        ["css=#imarca", "css:finder"],
+        ["xpath=//input[@id='imarca']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "a23387a7-b55e-4736-97a3-6c7542f78583",
+      "id": "bb7a4ce3-1544-414e-8eeb-e0c861d14e0b",
+      "comment": "",
+      "command": "type",
+      "target": "id=imarca",
+      "targets": [
+        ["id=imarca", "id"],
+        ["css=#imarca", "css:finder"],
+        ["xpath=//input[@id='imarca']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Nuevo"
+    }, {
+      "id": "3befffc2-8062-4562-ae0b-e40feca4f472",
+      "comment": "",
+      "command": "type",
+      "target": "id=imodelo",
+      "targets": [
+        ["id=imodelo", "id"],
+        ["css=#imodelo", "css:finder"],
+        ["xpath=//input[@id='imodelo']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Test"
+    }, {
+      "id": "cbe076e7-0c4a-4fa5-b42b-947fda1e615d",
       "comment": "",
       "command": "click",
-      "target": "css=.bi-plus-square",
+      "target": "id=ifecha",
       "targets": [
-        ["css=.bi-plus-square", "css:finder"],
-        ["xpath=//span[@id='addCoche']/em", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/span/em", "xpath:position"]
+        ["id=ifecha", "id"],
+        ["css=#ifecha", "css:finder"],
+        ["xpath=//input[@id='ifecha']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "06c39e13-41dc-4633-8659-f66f46773682",
+      "id": "1ff0907d-a6f8-4fa6-a6f5-11aa6f8d7c5f",
       "comment": "",
       "command": "click",
-      "target": "css=.btn-success",
+      "target": "id=ifecha",
       "targets": [
-        ["css=.btn-success", "css:finder"],
-        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='vistaCrearCRUD']/form/div[5]/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/form/div[5]/div/button", "xpath:position"],
+        ["id=ifecha", "id"],
+        ["css=#ifecha", "css:finder"],
+        ["xpath=//input[@id='ifecha']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d4c7052-7c60-4d23-9c51-6f7b21814d87",
+      "comment": "",
+      "command": "type",
+      "target": "id=ifecha",
+      "targets": [
+        ["id=ifecha", "id"],
+        ["css=#ifecha", "css:finder"],
+        ["xpath=//input[@id='ifecha']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "2023-01-06"
+    }, {
+      "id": "06df1470-a9d6-4007-96fa-24c3394de6d2",
+      "comment": "",
+      "command": "click",
+      "target": "id=extra1",
+      "targets": [
+        ["id=extra1", "id"],
+        ["css=#extra1", "css:finder"],
+        ["xpath=//input[@id='extra1']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "763bbb93-d3d9-4704-bdf4-3a6315f86f51",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-check:nth-child(6)",
+      "targets": [
+        ["css=.form-check:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[3]/div/div[5]", "xpath:idRelative"],
+        ["xpath=//div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0a7a872-096c-4da7-b55f-ff1de16baaea",
+      "comment": "",
+      "command": "click",
+      "target": "id=extra5",
+      "targets": [
+        ["id=extra5", "id"],
+        ["css=#extra5", "css:finder"],
+        ["xpath=//input[@id='extra5']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[3]/div/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a171ab0-38cb-45e7-8f14-67aebd071405",
+      "comment": "",
+      "command": "click",
+      "target": "id=textDescripcion",
+      "targets": [
+        ["id=textDescripcion", "id"],
+        ["css=#textDescripcion", "css:finder"],
+        ["xpath=//textarea[@id='textDescripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[3]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8845181f-e0a7-4433-a500-2b8733cd93a5",
+      "comment": "",
+      "command": "type",
+      "target": "id=textDescripcion",
+      "targets": [
+        ["id=textDescripcion", "id"],
+        ["css=#textDescripcion", "css:finder"],
+        ["xpath=//textarea[@id='textDescripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[3]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Descripcion Nueva"
+    }, {
+      "id": "670e00d9-b47b-4300-8f5e-3df0f17b2f7e",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnAceptar",
+      "targets": [
+        ["id=btnAceptar", "id"],
+        ["css=#btnAceptar", "css:finder"],
+        ["xpath=//button[@id='btnAceptar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[5]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
         ["xpath=//button[contains(.,'Aceptar')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "a13ec5ab-ec1a-4ab3-9644-ded33ea6f3c2",
+      "id": "d300c2ae-369b-4f4a-bff5-6ba013147870",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "coche insertado correctamente",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6c58013-8509-4eb2-854e-4d5114f77782",
       "comment": "",
       "command": "click",
-      "target": "css=.bi-pencil-square",
+      "target": "xpath=(//span[@id='delCoche']/em)[12]",
       "targets": [
-        ["css=.bi-pencil-square", "css:finder"],
-        ["xpath=//span[@id='modCoche']/em", "xpath:idRelative"],
+        ["xpath=(//span[@id='delCoche']/em)[12]", "xpath:idRelative"],
+        ["xpath=//div[12]/div[4]/div[2]/span/em", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9337cec4-6fc8-4083-a42d-782d03e5b472",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "borrado",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b75f4bc2-1546-4e25-82f4-5700a006d7b6",
+      "comment": "",
+      "command": "click",
+      "target": "id=enFabq",
+      "targets": [
+        ["id=enFabq", "id"],
+        ["css=#enFabq", "css:finder"],
+        ["xpath=//select[@id='enFabq']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaListaCRUD']/div[2]/div[3]/select", "xpath:idRelative"],
+        ["xpath=//div[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49d6c3df-37b7-4bd6-a2de-2c0048b32fb4",
+      "comment": "",
+      "command": "select",
+      "target": "id=enFabq",
+      "targets": [],
+      "value": "label=Ford"
+    }, {
+      "id": "6536cc86-e639-4391-86f3-4c27bf7d5e93",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnBuscar",
+      "targets": [
+        ["id=btnBuscar", "id"],
+        ["css=#btnBuscar", "css:finder"],
+        ["xpath=//button[@id='btnBuscar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaListaCRUD']/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c6fe482-36ff-45f3-a094-6ac91dbde03e",
+      "comment": "",
+      "command": "click",
+      "target": "id=enFabq",
+      "targets": [
+        ["id=enFabq", "id"],
+        ["css=#enFabq", "css:finder"],
+        ["xpath=//select[@id='enFabq']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaListaCRUD']/div[2]/div[3]/select", "xpath:idRelative"],
+        ["xpath=//div[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d95e1000-370c-41c4-a9ae-b13821d65b7f",
+      "comment": "",
+      "command": "select",
+      "target": "id=enFabq",
+      "targets": [],
+      "value": "label=Cadillac"
+    }, {
+      "id": "297fd69d-40a2-4e3a-8337-6d02d5195ded",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnBuscar",
+      "targets": [
+        ["id=btnBuscar", "id"],
+        ["css=#btnBuscar", "css:finder"],
+        ["xpath=//button[@id='btnBuscar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaListaCRUD']/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3df3d6a4-0b16-49a1-8b6b-f7e22aaf3119",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bi",
+      "targets": [
+        ["css=.bi", "css:finder"],
+        ["xpath=//span[@id='addCoche']/em", "xpath:idRelative"],
         ["xpath=//em", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "6da7a501-2230-4638-b452-eb004550c357",
+      "id": "35981639-ee68-4fe1-823b-895add941a70",
       "comment": "",
       "command": "click",
-      "target": "css=.btn-secondary:nth-child(2)",
+      "target": "id=btnCancelar",
       "targets": [
-        ["css=.btn-secondary:nth-child(2)", "css:finder"],
-        ["xpath=//div[@id='vistaModificarCRUD']/form/div[5]/div/button[2]", "xpath:idRelative"],
-        ["xpath=//button[2]", "xpath:position"],
-        ["xpath=//button[contains(.,'Cancelar')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "0f81a745-64ea-4bf6-934f-cf6874e1abba",
-      "comment": "",
-      "command": "click",
-      "target": "css=.bi-pencil-square",
-      "targets": [
-        ["css=.bi-pencil-square", "css:finder"],
-        ["xpath=//span[@id='modCoche']/em", "xpath:idRelative"],
-        ["xpath=//em", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "ccb1f723-e7a4-42e7-bb35-4eebd1662abe",
-      "comment": "",
-      "command": "click",
-      "target": "css=.btn-warning:nth-child(1)",
-      "targets": [
-        ["css=.btn-warning:nth-child(1)", "css:finder"],
-        ["xpath=//button[@type='submit']", "xpath:attributes"],
-        ["xpath=//div[@id='vistaModificarCRUD']/form/div[5]/div/button", "xpath:idRelative"],
+        ["id=btnCancelar", "id"],
+        ["css=#btnCancelar", "css:finder"],
+        ["xpath=//button[@id='btnCancelar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[5]/div/button", "xpath:idRelative"],
         ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Atrás')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b94ca975-1459-4494-bab8-790fbd0646c7",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnBuscar",
+      "targets": [
+        ["id=btnBuscar", "id"],
+        ["css=#btnBuscar", "css:finder"],
+        ["xpath=//button[@id='btnBuscar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaListaCRUD']/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c6162de-2371-4c2f-8e13-674b6ecd4011",
+      "comment": "",
+      "command": "click",
+      "target": "id=enFabq",
+      "targets": [
+        ["id=enFabq", "id"],
+        ["css=#enFabq", "css:finder"],
+        ["xpath=//select[@id='enFabq']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaListaCRUD']/div[2]/div[3]/select", "xpath:idRelative"],
+        ["xpath=//div[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "829056b3-dbd3-4335-9095-f0e1da12a065",
+      "comment": "",
+      "command": "select",
+      "target": "id=enFabq",
+      "targets": [],
+      "value": "label=Volkswagen"
+    }, {
+      "id": "7405b7ef-e101-4b85-8edb-bbf9ec62005a",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnBuscar",
+      "targets": [
+        ["id=btnBuscar", "id"],
+        ["css=#btnBuscar", "css:finder"],
+        ["xpath=//button[@id='btnBuscar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaListaCRUD']/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7914d69b-06d8-4eaf-8e69-a89d28aad963",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnBuscar",
+      "targets": [
+        ["id=btnBuscar", "id"],
+        ["css=#btnBuscar", "css:finder"],
+        ["xpath=//button[@id='btnBuscar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaListaCRUD']/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e4b0f83-25f3-4919-8232-615e1c0b4508",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=btnBuscar",
+      "targets": [
+        ["id=btnBuscar", "id"],
+        ["css=#btnBuscar", "css:finder"],
+        ["xpath=//button[@id='btnBuscar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaListaCRUD']/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2afe9b5-b6dc-438a-b8ad-b5581f51429f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.border > img",
+      "targets": [
+        ["css=.border > img", "css:finder"],
+        ["xpath=//img[@alt='imagen']", "xpath:img"],
+        ["xpath=//div[@id='coche2']/div/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae6702b0-4cb5-4fa6-8d78-81bcd172ac9c",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnCancelar",
+      "targets": [
+        ["id=btnCancelar", "id"],
+        ["css=#btnCancelar", "css:finder"],
+        ["xpath=//button[@id='btnCancelar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[5]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Atrás')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c944ca6b-96c7-48fe-9e19-ff1fcbaca275",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[@id='modCoche']/em",
+      "targets": [
+        ["xpath=//span[@id='modCoche']/em", "xpath:idRelative"],
+        ["xpath=//em", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44a18047-d60b-4e31-911c-18904a9d8f69",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnCancelar",
+      "targets": [
+        ["id=btnCancelar", "id"],
+        ["css=#btnCancelar", "css:finder"],
+        ["xpath=//button[@id='btnCancelar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[5]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Atrás')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a1eefd6-d138-428d-ab89-08c343ef6c2b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//img[@alt='imagen'])[4]",
+      "targets": [
+        ["xpath=(//img[@alt='imagen'])[4]", "xpath:img"],
+        ["xpath=(//div[@id='coche2']/div/img)[4]", "xpath:idRelative"],
+        ["xpath=//div[3]/div[4]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9107e803-baa8-4c73-8196-1abfde2a76ed",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnCancelar",
+      "targets": [
+        ["id=btnCancelar", "id"],
+        ["css=#btnCancelar", "css:finder"],
+        ["xpath=//button[@id='btnCancelar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[5]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Atrás')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d8597de-8d71-4803-b539-48e64de5b21f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[@id='modCoche']/em",
+      "targets": [
+        ["xpath=//span[@id='modCoche']/em", "xpath:idRelative"],
+        ["xpath=//em", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee3bd24d-f544-4e0e-9a07-9693fd067721",
+      "comment": "",
+      "command": "click",
+      "target": "id=textDescripcion",
+      "targets": [
+        ["id=textDescripcion", "id"],
+        ["css=#textDescripcion", "css:finder"],
+        ["xpath=//textarea[@id='textDescripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[3]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c5dda6c-f501-45ef-8196-9d57270d4b43",
+      "comment": "",
+      "command": "type",
+      "target": "id=textDescripcion",
+      "targets": [
+        ["id=textDescripcion", "id"],
+        ["css=#textDescripcion", "css:finder"],
+        ["xpath=//textarea[@id='textDescripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[3]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "No descripción nueva"
+    }, {
+      "id": "18668db7-7f99-4518-8835-0bfa9e8f64d6",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnModificar",
+      "targets": [
+        ["id=btnModificar", "id"],
+        ["css=#btnModificar", "css:finder"],
+        ["xpath=//button[@id='btnModificar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[5]/div/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
         ["xpath=//button[contains(.,'Modificar')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "2fcb5582-95dd-4a28-89f3-9db913a215cf",
+      "id": "893f14bd-3a32-4fd8-a8c3-ec82721a75e3",
       "comment": "",
       "command": "chooseOkOnNextConfirmation",
-      "target": "",
+      "target": "coche modificado correctamente",
       "targets": [],
       "value": ""
     }, {
-      "id": "26cbcfa1-f793-4b96-8372-10cc110e7658",
+      "id": "ee453f09-9b68-440d-82bf-ebf32c023c76",
       "comment": "",
       "command": "click",
-      "target": "css=.bi-trash-fill",
+      "target": "xpath=//span[@id='modCoche']/em",
       "targets": [
-        ["css=.bi-trash-fill", "css:finder"],
-        ["xpath=//span[@id='delCoche']/em", "xpath:idRelative"],
-        ["xpath=//div[2]/span/em", "xpath:position"]
+        ["xpath=//span[@id='modCoche']/em", "xpath:idRelative"],
+        ["xpath=//em", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "92ea0620-031e-46c9-a45a-7b09b1299471",
+      "id": "e567b3df-d081-4d30-8092-a67fbebb2a54",
       "comment": "",
-      "command": "assertConfirmation",
-      "target": "Estas seguro?",
-      "targets": [],
+      "command": "click",
+      "target": "id=btnCancelar",
+      "targets": [
+        ["id=btnCancelar", "id"],
+        ["css=#btnCancelar", "css:finder"],
+        ["xpath=//button[@id='btnCancelar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[5]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Atrás')]", "xpath:innerText"]
+      ],
       "value": ""
     }, {
-      "id": "c54c8868-6439-4d41-8dcf-d52510f00fef",
+      "id": "44c7763a-5e74-454a-b84d-af9b1af20541",
       "comment": "",
-      "command": "webdriverChooseOkOnVisibleConfirmation",
-      "target": "",
-      "targets": [],
+      "command": "click",
+      "target": "xpath=//img[@alt='imagen']",
+      "targets": [
+        ["xpath=//img[@alt='imagen']", "xpath:img"],
+        ["xpath=//div[@id='coche2']/div/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/img", "xpath:position"]
+      ],
       "value": ""
     }, {
-      "id": "db07178d-1fd5-4daa-b57d-d7dfb62b266c",
+      "id": "fda26263-c19b-4aea-a52d-237ab72e39e0",
       "comment": "",
-      "command": "assertAlert",
-      "target": "Okay, coche borrado.",
-      "targets": [],
+      "command": "click",
+      "target": "id=btnCancelar",
+      "targets": [
+        ["id=btnCancelar", "id"],
+        ["css=#btnCancelar", "css:finder"],
+        ["xpath=//button[@id='btnCancelar']", "xpath:attributes"],
+        ["xpath=//div[@id='vistaFormulario']/div[2]/div[5]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Atrás')]", "xpath:innerText"]
+      ],
       "value": ""
     }]
   }],
@@ -160,8 +568,8 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["e7834455-9491-4f2f-806e-fb9131889a91"]
+    "tests": []
   }],
-  "urls": ["https://miguelhidalgocastro.github.io/"],
+  "urls": ["https://miguelhidalgocastro.github.io/", "https://miguelhidalgocastro.github.io/dawlol/src/www/"],
   "plugins": []
 }
