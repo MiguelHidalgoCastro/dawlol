@@ -16,12 +16,10 @@ export class Vista {
      * @param {boolean} ver 
      */
     mostrar(ver) {
-        if (ver) {
+        if (ver)
             this.div.style.display = 'block'
-
-        }
-        else {
+        else
             this.div.style.display = 'none'
-        }
+
     }
 }

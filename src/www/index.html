@@ -19,22 +19,23 @@
     -->
     <div class="container">
         <div class="row justify-content-center" id="navbar">
-            <img src="assets/logo.png" alt="" style="width: 25%;">
+            <img src="assets/logo.png" alt="" style="width: 25%;" id="imgNav">
         </div>
     </div>
 
     <!--
-        VISTA CREAR
+        VISTA FORMULARIO
     -->
-    <div class="container" id="vistaCrearCRUD">
+    <div class="container" id="vistaFormulario">
         <!--Titulo-->
         <div class="row">
             <div class="col" id="tituloCrearCRUD">
-                <h3 class="fw-bold mb-3">Crear coche</h3>
+                <h3 class="fw-bold mb-3" id="tituloCrear">Crear coche</h3>
+                <h3 class="fw-bold mb-3" id="tituloModificar">Modificar coche</h3>
             </div>
         </div>
 
-        <!--FORMULARIO CREAR-->
+        <!--FORMULARIO-->
 
         <div class="col-8 p-2 w-auto">
             <div class="row mb-1">
@@ -94,15 +95,22 @@
                 </div>
             </div>
             <div class="row mb-3">
+                <div class="col-1" style="display: none;" id="divImagenPrevia">
+                    <span>VistaPrevia</span>
+                    <img src="" id="imagenPrevia" width="95%">
+                </div>
                 <div class="col">
                     <label for="imagen" class="form-label">Elije Imágenes</label>
                     <input class="form-control" type="file" id="imagen" name="imagen">
                 </div>
+
             </div>
             <div class="row mb-1 float-end">
                 <div class="col">
-                    <button class="btn btn-warning">Cancelar</button>
-                    <button class="btn btn-success" id="btnCrearAceptar">Aceptar</button>
+                    <button class="btn btn-warning" id="btnCancelar">Cancelar</button>
+                    <button class="btn btn-success" id="btnAceptar">Aceptar</button>
+                    <button class="btn btn-success" id="btnModificar">Modificar</button>
+                    <input type="hidden" value="" id="idCoche">
                 </div>
             </div>
         </div>
@@ -110,7 +118,7 @@
     </div>
 
     <!--
-        VISTA LISTAR
+        VISTA LISTA
     -->
     <div class="container" id="vistaListaCRUD">
         <!--Titulo-->
@@ -140,18 +148,18 @@
                 <select id="enFabq" class="form-select">
                     <option selected>Renault</option>
                     <option>Ford</option>
-                    <option value="">Mercedes</option>
-                    <option value="">Opel</option>
+                    <option>Mini</option>
+                    <option>Cadillac</option>
                 </select>
             </div>
             <div class="col-sm-2">
-                <button class="btn btn-secondary" type="submit">Buscar</button>
+                <button class="btn btn-secondary" id="btnBuscar">Buscar</button>
             </div>
 
 
         </div>
         <!--Listado de coches -->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" id="listaCoches">
             <div class="col-xl-3 col-md-4 col-sm-10 ms-sm-5 border mb-4" id="coche1">
                 <div class="row border">
                     <img src="assets/coche1.png" alt="" width="100%" height="auto">
