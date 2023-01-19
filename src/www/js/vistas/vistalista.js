@@ -9,7 +9,7 @@ import { Vista } from "./vista.js";
 export class VistaLista extends Vista {
     /**
    * Constructor
-   * @param {Class Controlador} controlador 
+   * @param {Controlador} controlador 
    * @param {HTMLElement} div 
    */
     constructor(controlador, div) {
@@ -39,8 +39,14 @@ export class VistaLista extends Vista {
 
 
     }
-
+    /**
+     * Función que carga la lista de objetos en la web
+     * La lista viene del controlador, con todos los objetos de la bbdd
+     * Mediante DOM crea las tarjetas de los objetos
+     * @param {Array} lista 
+     */
     cargar(lista) {
+        console.log(lista);
         /* Todo esto lo tengo que pasar a la vista */
         this.nodoLista.textContent = ''
 
@@ -140,7 +146,10 @@ export class VistaLista extends Vista {
 
 
     }
-
+    /**
+     * Función que le manda al controlador lo que el modelo tiene que buscar en la bbdd
+     * En éste caso, son todos los objetos
+     */
 
     mostrarCoches() {
         this.controlador.buscar()
@@ -165,7 +174,10 @@ export class VistaLista extends Vista {
     pulsarBorrar(id) {
         this.controlador.borrar(id)
     }
-
+    /**
+     * Función que le manda al controlador lo que el modelo tiene que buscar en la bbdd
+     * En éste caso trae las coincidencias de las marcas 
+     */
     pulsarBuscar() {
         this.controlador.buscar(this.selectMarca.value)
     }

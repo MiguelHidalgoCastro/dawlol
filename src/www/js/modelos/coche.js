@@ -3,7 +3,16 @@
  * @author Miguel Hidalgo Castro <<miguelhidalgocastro.guadalupe@alumnado.fundacionloyola.net>>
  */
 export class Coche {
-
+    /**
+     * Constructor de un Coche
+     * @param {string} marca 
+     * @param {string} modelo 
+     * @param {string} fecha 
+     * @param {string} enFab 
+     * @param {string} descripcion 
+     * @param {Array} extras 
+     * @param {string} imagen 
+     */
     constructor(marca, modelo, fecha, enFab, descripcion, extras, imagen) {
         //this.idMarcaModelo; //para la segunda versión
         this.marca = marca

@@ -48,6 +48,9 @@ class Controlador {
         this.buscar()
 
     }
+    /**
+     * Función que recarga la aplicación
+     */
     recargar() {
         this.iniciar()
     }
@@ -58,12 +61,15 @@ class Controlador {
         this.vistaListaCoches.mostrar(true)
         this.vistaFormulario.mostrar(false)
     }
+    /**
+     * Para volver al Index
+     */
     back() {
         this.mostrarIndex()
     }
 
     /**
-     * Muestra el formulario de crear
+     * Para mostrar los componentes necesarios para crear un coche
      */
     mostrarFormularioCrear() {
         this.vistaListaCoches.mostrar(false)
@@ -74,7 +80,9 @@ class Controlador {
         this.tituloCrear.style.display = 'block'
         //this.VistaModificarCoches.mostrar(false)
     }
-
+    /**
+     * Para mostrar los componentes necesarios para modificar un coche
+     */
     mostrarFormularioModificar() {
         this.vistaListaCoches.mostrar(false)
         this.vistaFormulario.mostrar(true)
@@ -84,11 +92,16 @@ class Controlador {
         this.tituloCrear.style.display = 'none'
 
     }
-
+    /**
+     * Función que pasa los datos al modelo del coche que tiene que insertar en al bbdd
+     * @param {Object} coche 
+     */
     insertarCoche(coche) {
         this.modelo.insertar(coche, this.insertarCocheOK.bind(this))
     }
-
+    /**
+     * Función de callback que avisa al usuario de la correcta insercción del coche en la bbdd
+     */
     insertarCocheOK() {
         //feedback al usuario
         alert("coche insertado correctamente");
@@ -97,37 +110,64 @@ class Controlador {
         this.vistaFormulario.mostrar(false)
         this.recargar()
     }
-
+    /**
+     * Función que pasa los datos al modelo del coche y el id que tiene que modificar en al bbdd
+     * @param {int} id 
+     * @param {Object} coche 
+     */
     insertarCochePorID(id, coche) {
         this.modelo.insertarCochePorID(id, coche, this.insertarCochePorIDOK.bind(this))
     }
-
+    /**
+     * Función de callback que avisa al usuario de la correcta modificación del coche en la bbdd
+     */
     insertarCochePorIDOK() {
         alert('coche modificado correctamente')
         this.vistaListaCoches.mostrar(true)
         this.vistaFormulario.mostrar(false)
         this.recargar()
     }
-
+    /**
+     * Funcion que pasa la marca al modelo para buscar las coincidencias en la base de datos
+     * @param {string} marca 
+     */
     buscar(marca) {
         this.modelo.buscar(marca, this.buscarOK.bind(this))
     }
-
+    /**
+     * Función de callback que le da a la vista la lista de coches de la coincidencia de búsqueda
+     * @param {Array} lista 
+     */
     buscarOK(lista) {
         this.vistaListaCoches.cargar(lista)
     }
-
+    /**
+     *  Función que pasa el dato del id del coche al modelo para borrarlo
+     * @param {int} id 
+     */
     borrar(id) {
         this.modelo.borrar(id, this.borrarOK.bind(this))
     }
+    /**
+     * Función de callback que avisa al usuario del borrado 
+     */
     borrarOK() {
         alert('borrado')
         this.recargar()
     }
-
+    /**
+     * Función que le pasa el id al modelo para buscarlo en la bbdd
+     * @param {int} id 
+     */
     buscarPorID(id) {
         this.modelo.buscarPorID(id, this.buscarPorIDOK.bind(this, id))
     }
+
+    /**
+     * Función de callback que regresa del modelo para pasarle a la vista el coche buscado
+     * @param {int} id 
+     * @param {Object} coche 
+     */
     buscarPorIDOK(id, coche) {
         this.mostrarFormularioModificar()
         this.vistaFormulario.cargarCoche(id, coche)
