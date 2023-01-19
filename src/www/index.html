@@ -30,8 +30,9 @@
         <!--Titulo-->
         <div class="row">
             <div class="col" id="tituloCrearCRUD">
-                <h3 class="fw-bold mb-3" id="tituloCrear">Crear coche</h3>
-                <h3 class="fw-bold mb-3" id="tituloModificar">Modificar coche</h3>
+                <h3 class="fw-bold mb-3 mt-2" id="tituloCrear">Crear coche</h3>
+                <h3 class="fw-bold mb-3 mt-2" id="tituloModificar">Modificar coche</h3>
+                <h3 class="fw-bold mb-3 mt-2" id="tituloConsultar">Consultar coche</h3>
             </div>
         </div>
 
@@ -107,7 +108,7 @@
             </div>
             <div class="row mb-1 float-end">
                 <div class="col">
-                    <button class="btn btn-warning" id="btnCancelar">Cancelar</button>
+                    <button class="btn btn-secondary" id="btnCancelar">Atrás</button>
                     <button class="btn btn-success" id="btnAceptar">Aceptar</button>
                     <button class="btn btn-success" id="btnModificar">Modificar</button>
                     <input type="hidden" value="" id="idCoche">
@@ -124,7 +125,7 @@
         <!--Titulo-->
         <div class="row">
             <div class="col" id="tituloListadoCRUD">
-                <h3 class="fw-bold mb-3">Listado de coches</h3>
+                <h3 class="fw-bold mb-3 mt-2">Listado de coches</h3>
             </div>
         </div>
 
@@ -146,10 +147,73 @@
             <div class="col-sm-4">
                 <label for="enFabq" style="display: none;">Hola</label>
                 <select id="enFabq" class="form-select">
-                    <option selected>Renault</option>
-                    <option>Ford</option>
-                    <option>Mini</option>
-                    <option>Cadillac</option>
+                    <option value="Alfa Romeo">Alfa Romeo</option>
+                    <option value="Aston Martin">Aston Martin</option>
+                    <option value="Audi">Audi</option>
+                    
+                    <option value="Autovaz">Autovaz</option>
+                    <option value="Bentley">Bentley</option>
+                    <option value="Bmw">Bmw</option>
+                    <option value="Cadillac">Cadillac</option>
+                    
+                    <option value="Caterham">Caterham</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Chrysler">Chrysler</option>
+                    <option value="Citroen">Citroen</option>
+                    
+                    <option value="Daihatsu">Daihatsu</option>
+                    <option value="Dodge">Dodge</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Fiat">Fiat</option>
+                    
+                    <option value="Ford">Ford</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Hummer">Hummer</option>
+                    <option value="Hyundai">Hyundai</option>
+                    
+                    <option value="Isuzu">Isuzu</option>
+                    <option value="Jaguar">Jaguar</option>
+                    <option value="Jeep">Jeep</option>
+                    <option value="Kia">Kia</option>
+                    
+                    <option value="Lamborghini">Lamborghini</option>
+                    <option value="Lancia">Lancia</option>
+                    <option value="Land Rover">Land Rover</option>
+                    <option value="Lexus">Lexus</option>
+                    
+                    <option value="Lotus">Lotus</option>
+                    <option value="Maserati">Maserati</option>
+                    <option value="Mazda">Mazda</option>
+                    <option value="Mercedes Benz">Mercedes Benz</option>
+                    
+                    <option value="MG">MG</option>
+                    <option value="Mini">Mini</option>
+                    <option value="Mitsubishi">Mitsubishi</option>
+                    <option value="Morgan">Morgan</option>
+                    
+                    <option value="Nissan">Nissan</option>
+                    <option value="Opel">Opel</option>
+                    <option value="Peugeot">Peugeot</option>
+                    <option value="Porsche">Porsche</option>
+                    
+                    <option value="Renault">Renault</option>
+                    <option value="Rolls Royce">Rolls Royce</option>
+                    <option value="Rover">Rover</option>
+                    <option value="Saab">Saab</option>
+                    
+                    <option value="Seat">Seat</option>
+                    <option value="Skoda">Skoda</option>
+                    <option value="Smart">Smart</option>
+                    <option value="Ssangyong">Ssangyong</option>
+                    
+                    <option value="Subaru">Subaru</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="Tata">Tata</option>
+                    <option value="Toyota">Toyota</option>
+                    
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Volvo">Volvo</option>
+                    
                 </select>
             </div>
             <div class="col-sm-2">
@@ -158,35 +222,15 @@
 
 
         </div>
-        <!--Listado de coches -->
+
         <div class="row justify-content-center" id="listaCoches">
-            <div class="col-xl-3 col-md-4 col-sm-10 ms-sm-5 border mb-4" id="coche1">
-                <div class="row border">
-                    <img src="assets/coche1.png" alt="" width="100%" height="auto">
-                </div>
-                <div class="row border">
-                    <h5 class="fw-bold text-center">PORSCHE</h5>
-                </div>
-                <div class="row border">
-                    <h5 class="fw-bold text-center">911 TARGA</h5>
-                </div>
-                <div class="row border text-center">
-                    <div class="col border">
-                        <span id="modCoche" class="link-dark"><em class="bi bi-pencil-square"
-                                style="font-size: 3rem;"></em></span>
-                    </div>
-                    <div class="col border">
-                        <span id="delCoche" class="link-dark"><em class="bi bi-trash-fill"
-                                style="font-size: 3rem;"></em></span>
-                    </div>
-                </div>
-            </div>
+
+
             <!--Botón para añadir-->
             <div class="col-xl-3 col-md-4 col-sm-10 ms-sm-5 border mb-4"
                 style="display: flex; align-items: center; justify-content: center;">
                 <span id="addCoche" class="link-dark"><em class="bi bi-plus-square"
                         style="font-size: 4rem;"></em></span>
-
             </div>
         </div>
     </div>

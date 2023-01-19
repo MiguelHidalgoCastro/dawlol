@@ -136,6 +136,7 @@ export class VistaFormulario extends Vista {
         this.descripcion.value = ''
         this.base64 = ''
         this.imagen.src = ''
+        this.imagen.value = ''
 
         document.getElementById('divImagenPrevia').style.display = 'none'
         document.getElementById('imagenPrevia').src = ''
@@ -154,8 +155,10 @@ export class VistaFormulario extends Vista {
      * El id que me entra por parámetro desde el controlador, lo guardo en un input hidden para no perderlo
      * @param {int} id 
      * @param {Object} coche 
+     * @param {String} string Aquí me dice que voy a hacer si modificar o consultar
      */
-    cargarCoche(id, coche) {
+    cargarCoche(id, coche, string) {
+
         this.marca.value = coche.marca
         this.modelo.value = coche.modelo
         this.fecha.value = coche.fechaFabricacion
@@ -172,6 +175,15 @@ export class VistaFormulario extends Vista {
         document.getElementById('divImagenPrevia').style.display = 'block'
         document.getElementById('imagenPrevia').src = coche.imagen
         document.getElementById('idCoche').value = id
+
+
+        if (string === 'consultar')
+            this.cambiarEstadoCampos(true)
+        else
+            this.cambiarEstadoCampos(false)
+
+
+
     }
     /**
      * Función que empaqueta los datos nuevos del coche y 
@@ -245,5 +257,37 @@ export class VistaFormulario extends Vista {
 
 
     }
+    /**
+     * Función que me deshabilita los campos o me los habilita según la entrada
+     * @param {boolean} boolean 
+     */
+    cambiarEstadoCampos(boolean) {
+        if (boolean) {
+            this.marca.disabled = true
+            this.modelo.disabled = true
+            this.fecha.disabled = true
+            this.descripcion.disabled = true
+            this.enFab.disabled = true
+            this.extra1.disabled = true
+            this.extra2.disabled = true
+            this.extra3.disabled = true
+            this.extra4.disabled = true
+            this.extra5.disabled = true
+            this.imagen.disabled = true
+        }
+        else {
+            this.marca.disabled = false
+            this.modelo.disabled = false
+            this.fecha.disabled = false
+            this.descripcion.disabled = false
+            this.enFab.disabled = false
+            this.extra1.disabled = false
+            this.extra2.disabled = false
+            this.extra3.disabled = false
+            this.extra4.disabled = false
+            this.extra5.disabled = false
+            this.imagen.disabled = false
+        }
 
+    }
 }

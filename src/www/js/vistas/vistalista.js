@@ -32,6 +32,7 @@ export class VistaLista extends Vista {
         this.btnModificarCoche = document.getElementById('modCoche')
 
 
+
         this.btnBuscar = document.getElementById('btnBuscar')
         this.btnBuscar.onclick = this.pulsarBuscar.bind(this)
 
@@ -46,7 +47,6 @@ export class VistaLista extends Vista {
      * @param {Array} lista 
      */
     cargar(lista) {
-        console.log(lista);
         /* Todo esto lo tengo que pasar a la vista */
         this.nodoLista.textContent = ''
 
@@ -63,6 +63,7 @@ export class VistaLista extends Vista {
             img.alt = 'imagen'
             img.style.width = '100%'
             img.style.height = 'auto'
+            img.onclick = this.consultarCoche.bind(this, element.id)
 
             let div3 = document.createElement('div')
             div3.setAttribute('class', 'row border')
@@ -161,15 +162,17 @@ export class VistaLista extends Vista {
      */
     pulsarCrear() {
         this.controlador.mostrarFormularioCrear()
+
     }
     /**
      *  Le pido al controlador que muestre el formulario de modificar
      */
     pulsarModificar(id) {
-        this.controlador.buscarPorID(id)
+        this.controlador.buscarPorID(id, true)
     }
     /**
-     * Le pido al controlador que me borre el objeto
+     * Función que le manda el id del elemento al controlador para buscarlo en la bbdd y borrarlo
+     * @param {int} id 
      */
     pulsarBorrar(id) {
         this.controlador.borrar(id)
@@ -181,5 +184,11 @@ export class VistaLista extends Vista {
     pulsarBuscar() {
         this.controlador.buscar(this.selectMarca.value)
     }
-
+    /**
+     * Función que le manda el id al controlador para buscarlo en la bbdd
+     * @param {int} id 
+     */
+    consultarCoche(id) {
+        this.controlador.buscarPorID(id, false)
+    }
 }

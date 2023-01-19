@@ -36,8 +36,11 @@ class Controlador {
         /*Para ocultar titulo y botones del formulario */
         this.tituloCrear = document.getElementById('tituloCrear')
         this.tituloModificar = document.getElementById('tituloModificar')
+        this.tituloConsultar = document.getElementById('tituloConsultar')
+
         this.btnAceptar = document.getElementById('btnAceptar')
         this.btnModificar = document.getElementById('btnModificar')
+
         this.imagenNav = document.getElementById('imgNav')
         this.imagenNav.onclick = this.recargar.bind(this)
 
@@ -78,7 +81,8 @@ class Controlador {
         this.tituloModificar.style.display = 'none'
         this.btnAceptar.style.display = 'inline'
         this.tituloCrear.style.display = 'block'
-        //this.VistaModificarCoches.mostrar(false)
+        this.vistaFormulario.cambiarEstadoCampos(false)
+        this.tituloConsultar.style.display = 'none'
     }
     /**
      * Para mostrar los componentes necesarios para modificar un coche
@@ -90,8 +94,20 @@ class Controlador {
         this.tituloModificar.style.display = 'block'
         this.btnAceptar.style.display = 'none'
         this.tituloCrear.style.display = 'none'
+    }
+    /**
+     * Para mostrar los componentes necesarios para consultar un coche
+     */
+    mostrarConsultar() {
+        this.vistaListaCoches.mostrar(false)
+        this.vistaFormulario.mostrar(true)
+        this.btnModificar.style.display = 'none'
+        this.tituloModificar.style.display = 'none'
+        this.btnAceptar.style.display = 'none'
+        this.tituloCrear.style.display = 'none'
 
     }
+
     /**
      * Función que pasa los datos al modelo del coche que tiene que insertar en al bbdd
      * @param {Object} coche 
@@ -159,19 +175,34 @@ class Controlador {
      * Función que le pasa el id al modelo para buscarlo en la bbdd
      * @param {int} id 
      */
-    buscarPorID(id) {
-        this.modelo.buscarPorID(id, this.buscarPorIDOK.bind(this, id))
+    buscarPorID(id, boolean) {
+        if (boolean === true)
+            this.modelo.buscarPorID(id, this.buscarPorIDOK.bind(this, id))
+        if (boolean === false)
+            this.modelo.buscarPorID(id, this.consultarPorIDOK.bind(this, id))
+
     }
 
     /**
-     * Función de callback que regresa del modelo para pasarle a la vista el coche buscado
+     * Función de callback que regresa del modelo para pasarle a la vista el coche buscando
      * @param {int} id 
      * @param {Object} coche 
      */
     buscarPorIDOK(id, coche) {
         this.mostrarFormularioModificar()
-        this.vistaFormulario.cargarCoche(id, coche)
+        this.vistaFormulario.cargarCoche(id, coche, 'modificar')
     }
+    /**
+     *  Función de callback que regresa del modelo para pasarle a la vista el coche buscando
+     * @param {int} id 
+     * @param {Object} coche 
+     */
+    consultarPorIDOK(id, coche) {
+        this.mostrarConsultar()
+        this.vistaFormulario.cargarCoche(id, coche, 'consultar')
+    }
+
+
 }
 
 const app = new Controlador()
