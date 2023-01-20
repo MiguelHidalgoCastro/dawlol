@@ -17,9 +17,12 @@
     <!--
         Banner
     -->
-    <div class="container">
+    <div class="container" id="">
+        <div class="row justify-content-center">
+            <img src="assets/wcag2AA.png" alt="" style="width: 10%;">
+        </div>
         <div class="row justify-content-center" id="navbar">
-            <img src="assets/logo.png" alt="" style="width: 25%;" id="imgNav">
+            <img src="assets/logo.png" alt="logo de la empresa" style="width: 25%;" id="imgNav">
         </div>
     </div>
 
@@ -161,6 +164,8 @@
                     <option value="Chrysler">Chrysler</option>
                     <option value="Citroen">Citroen</option>
 
+                    <option value="Cupra">Cupra</option>
+
                     <option value="Daihatsu">Daihatsu</option>
                     <option value="Dodge">Dodge</option>
                     <option value="Ferrari">Ferrari</option>
@@ -235,14 +240,17 @@
         </div>
     </div>
 
-    <footer class="bg-light text-center text-lg-start container fixed-bottom">
-        <div class="row">
-            <div class="col-1 m-auto">
-                <img src="assets/wcag2AA.png" alt="" style="width: 80%;">
-            </div>
-
+    <div class="container" id="mensajes">
+        <div class="row" id="mensajeCrear" style="display: none;">
+            <h1 class="fw-bold mb-3 mt-2">El vehículo se ha insertado correctamente</h1>
         </div>
-    </footer>
+        <div class="row" id="mensajeModificar" style="display: none;">
+            <h1 class="fw-bold mb-3 mt-2">El vehículo se ha modificado correctamente</h1>
+        </div>
+        <div class="row" id="mensajeBorrar" style="display: none;">
+            <h1 class="fw-bold mb-3 mt-2">El vehículo se ha borrado correctamente</h1>
+        </div>
+    </div>
 </body>
 
 <script type="module" src="js/controladores/app.js"></script>

@@ -247,12 +247,11 @@ export class VistaFormulario extends Vista {
             //los empaqueto
             let coche = new Coche(this.marca.value, this.modelo.value, this.fecha.value, this.enFab.value, this.descripcion.value, extras, document.getElementById('imagenPrevia').src)
 
-            console.log(coche, idCoche);
             // los mando al controlador como un objeto coche
             this.controlador.insertarCochePorID(idCoche, coche)
 
             //borro los campos
-            //this.borrarCampos()
+            this.borrarCampos()
         }
 
 

@@ -32,7 +32,6 @@ class Controlador {
         this.vistaListaCoches = new VistaLista(this, this.divListaCRUD)
         this.vistaFormulario = new VistaFormulario(this, this.divFormulario)
 
-
         /*Para ocultar titulo y botones del formulario */
         this.tituloCrear = document.getElementById('tituloCrear')
         this.tituloModificar = document.getElementById('tituloModificar')
@@ -43,6 +42,12 @@ class Controlador {
 
         this.imagenNav = document.getElementById('imgNav')
         this.imagenNav.onclick = this.recargar.bind(this)
+
+        /*Mensajes */
+        this.divMensajes = document.getElementById('mensajes')
+        this.mensajeCrear = document.getElementById('mensajeCrear')
+        this.mensajeModificar = document.getElementById('mensajeModificar')
+        this.mensajeBorrar = document.getElementById('mensajeBorrar')
 
         //Cargamos la vista principal
         this.mostrarIndex()
@@ -61,6 +66,7 @@ class Controlador {
      * Muestra la lista de coches
      */
     mostrarIndex() {
+        this.ocultarTodo()
         this.vistaListaCoches.mostrar(true)
         this.vistaFormulario.mostrar(false)
     }
@@ -69,6 +75,16 @@ class Controlador {
      */
     back() {
         this.mostrarIndex()
+    }
+    /**
+     * Función que oculta todos los divs
+     */
+    ocultarTodo() {
+        this.vistaListaCoches.mostrar(false)
+        this.vistaFormulario.mostrar(false)
+        this.mensajeCrear.style.display = 'none'
+        this.mensajeModificar.style.display = 'none'
+        this.mensajeBorrar.style.display = 'none'
     }
 
     /**
@@ -119,12 +135,9 @@ class Controlador {
      * Función de callback que avisa al usuario de la correcta insercción del coche en la bbdd
      */
     insertarCocheOK() {
-        //feedback al usuario
-        alert("coche insertado correctamente");
-        //Volvería a la vista lista
-        this.vistaListaCoches.mostrar(true)
-        this.vistaFormulario.mostrar(false)
-        this.recargar()
+        this.ocultarTodo()
+        this.mensajeCrear.style.display = 'block'
+        setTimeout(this.recargar.bind(this), 3000)
     }
     /**
      * Función que pasa los datos al modelo del coche y el id que tiene que modificar en al bbdd
@@ -138,10 +151,10 @@ class Controlador {
      * Función de callback que avisa al usuario de la correcta modificación del coche en la bbdd
      */
     insertarCochePorIDOK() {
-        alert('coche modificado correctamente')
-        this.vistaListaCoches.mostrar(true)
-        this.vistaFormulario.mostrar(false)
-        this.recargar()
+        this.ocultarTodo()
+        this.vistaFormulario.borrarCampos()
+        this.mensajeModificar.style.display = 'block'
+        setTimeout(this.recargar.bind(this), 3000)
     }
     /**
      * Funcion que pasa la marca al modelo para buscar las coincidencias en la base de datos
@@ -168,8 +181,9 @@ class Controlador {
      * Función de callback que avisa al usuario del borrado 
      */
     borrarOK() {
-        alert('borrado')
-        this.recargar()
+        this.ocultarTodo()
+        this.mensajeBorrar.style.display = 'block'
+        setTimeout(this.recargar.bind(this), 3000)
     }
     /**
      * Función que le pasa el id al modelo para buscarlo en la bbdd
